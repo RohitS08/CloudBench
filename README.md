@@ -98,8 +98,29 @@ Make sure Docker is running, then start MongoDB, and Traefik using Docker Compos
 - 👉 Apps are routed via Traefik (`user123.terminal.domain.com`)  
 - 👉 Session can be paused, resumed, or deleted from the dashboard  
 
-📸 Screenshots
-(Add screenshots here of your terminal interface, session dashboard, and routed apps)
+## 📸 Screenshots
+
+### 🏠 Home Page  
+![CloudBench_HomePage](https://github.com/user-attachments/assets/ed377053-25b1-4040-b40f-423491cdbb59)
+---
+### 🔐 Login  
+![CloudBench_Login](https://github.com/user-attachments/assets/4a01f457-0429-43e9-8076-b952ca92c1fe)
+---
+### 📊 Dashboard  
+![CloudBench_Dashboard](https://github.com/user-attachments/assets/6c2c9340-17f0-496e-b9bd-b0aa2123fbc3)
+---
+### ➕ Create New Session  
+![CloudBench_CreateSession](https://github.com/user-attachments/assets/45193b9d-917b-4c5d-ab83-b824ad4518b6)
+---
+### 🖥️ Session Terminal  
+![CloudBench_Session1](https://github.com/user-attachments/assets/96abf192-8307-4bd3-b7ed-06aa9233bc9b)
+---
+### 🐍 Running Python Server on Port 3000  
+![CloudBench_Session2](https://github.com/user-attachments/assets/723088a0-48e1-4806-ac5b-9ad8f016800f)
+---
+### 🌐 Accessing the Python App via Public URL  
+![CloudBench_Live](https://github.com/user-attachments/assets/f1aeef0f-f1a2-4d65-a40f-10639d63669a)
+
 
 👋 Author
-Rohit S.
+Rohit S. 🖤
