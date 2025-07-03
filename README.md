@@ -35,15 +35,16 @@ Frontend (React + xterm.js)
         │
    Socket.IO (real-time)
         │
-Backend API (Node.js) ──── Auth, MongoDB, Redis, Traefik routing
+Backend API (Node.js) ──── Auth, MongoDB
         │
    Socket.IO (session control)
         │
-Docker Server (Node.js) ─── Dockerode-based container control
+Docker Server (Node.js) ─── Dockerode-based container control, Traefik routing
         │
     Docker + Traefik
+```
 
-🛠️ Getting Started
+# 🛠️ Getting Started
 1. Clone the repo
 ```
 git clone https://github.com/RohitS08/CloudBench.git
@@ -58,40 +59,44 @@ Make sure Docker is running, then start MongoDB, and Traefik using Docker Compos
 
 4. Start the services
   # Backend API
-  ```cd backend
+  ```
+  cd backend
   npm install
-  npm run dev
+  npm run start
   ```
   
   # Docker Server
-  ```cd ../docker-server
+  ```
+  cd docker_server
   npm install
-  npm run dev
+  npm run start
   ```
   
   # Frontend
   ```
-  cd ../frontend
+  cd frontend
   npm install
   npm run dev
   ```
+## 🧪 Tech Stack
 
-🧪 Tech Stack
-  💠 Frontend	React, Vite, xterm.js
-  💠 Backend API	Node.js, Express, MongoDB, Redis
-  💠 Container Server	Node.js, Dockerode
-  💠 Terminal I/O	Socket.IO
-  💠 Routing	Traefik (dynamic subdomain)
-  💠 Auth	JWT
+| Layer            | Technology                          |
+|------------------|-------------------------------------|
+| 💠 Frontend       | React, Vite, xterm.js               |
+| 💠 Backend API    | Node.js, Express, MongoDB    |
+| 💠 Container Server | Node.js, Dockerode                |
+| 💠 Routing        | Traefik (dynamic subdomain)         |
+| 💠 Auth           | JWT                                 |
 
-🌍 Usage Flow
-  👉 User signs up / logs in (JWT issued)
-  👉 User creates a terminal session (Node.js, Python, Alpine, etc.)
-  👉 Backend requests Docker Server → container is created
-  👉 Terminal UI connects in real time using xterm.js + Socket.IO
-  👉 User runs commands or apps (e.g., npm run dev)
-  👉 Apps are routed via Traefik (user123.terminal.domain.com)
-  👉 Session can be paused, resumed, or deleted from the dashboard
+## 🌍 Usage Flow
+
+- 👉 User signs up / logs in (JWT issued)  
+- 👉 User creates a terminal session (Node.js, Python, Alpine, etc.)  
+- 👉 Backend requests Docker Server → container is created  
+- 👉 Terminal UI connects in real time using xterm.js + Socket.IO  
+- 👉 User runs commands or apps (e.g., `npm run dev`)  
+- 👉 Apps are routed via Traefik (`user123.terminal.domain.com`)  
+- 👉 Session can be paused, resumed, or deleted from the dashboard  
 
 📸 Screenshots
 (Add screenshots here of your terminal interface, session dashboard, and routed apps)
