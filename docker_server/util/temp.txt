@@ -1,0 +1,15 @@
+function calculateCpuPercent(stats) {
+          const cpuDelta = stats.cpu_stats.cpu_usage.total_usage - stats.precpu_stats.cpu_usage.total_usage;
+          const systemDelta = stats.cpu_stats.system_cpu_usage - stats.precpu_stats.system_cpu_usage;
+          
+          const cpuCount = stats.cpu_stats.online_cpus || stats.cpu_stats.cpu_usage.percpu_usage.length;
+          const percent = (cpuDelta / systemDelta) * cpuCount * 100;
+          
+          console.log(percent.toFixed(2));
+        }
+        const statsStream = await container.stats({ stream: true });  // Delete on disconnect of socket
+        statsStream.on('data', (chunk) => {
+          const stats = JSON.parse(chunk.toString());
+          calculateCpuPercent(stats);
+          console.log(stats.cpu_stats)
+        });

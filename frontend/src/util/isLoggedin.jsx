@@ -1,5 +1,7 @@
 import { useState, useContext, createContext, useEffect } from 'react';
 import { useAuth } from './authContext';
+// import { getSocket } from './socket';
+
 const LoginContext = createContext();
 
 export const LoginProvider = ({ children }) => {

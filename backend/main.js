@@ -20,6 +20,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 import SessionType from './models/SessionType.js';
 
+import initSessionNamespace from './util/sessionSocket.js';
 
 //############################################
 //#####One-time adding of Session-Types#######
@@ -49,6 +50,10 @@ const io = new Server(server, {
     origin: 'http://localhost:5173',
   }
 });
+
+const sessionNamespace = io.of('/session');
+initSessionNamespace(sessionNamespace);
+
 const docker = Docker();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));  //D:\Projects\cloud_cmd\backend
